@@ -1,0 +1,45 @@
+{
+    "project_name": "wdl_workflow",
+    "description": "A workflow for performing QC on FastQ files using FastQC, including Cromwell configuration and input data files.",
+    "version": "0.11.9",
+    "authors": [
+      {
+        "name": "Akbar Abayev",
+        "email": "akbaba@rsu.lv"
+      },
+      {
+        "name": "Baiba Vilne",
+        "email": "baiba.vilne@rsu.lv"
+      }
+    ],
+    "files": {
+      "workflow_file": "fastqc_subworkflow.wdl",
+      "input_file": "fastqc_subworkflow_inputs.json",
+      "cromwell_conf_file": "cromwell.conf",
+      "license_file": "LICENSE",
+      "readme_file": "README"
+    },
+    "tools": [
+        {
+            "name": "FastQC",
+            "version": "1.0"
+        },
+        {
+            "name": "Cromwell",
+            "version": "87"
+        },
+        {
+            "name": "WOMtool",
+            "version": "87"
+        }
+    ],
+    "input_data": [
+      "miRNA_S8141Nr10.1.fastq.gz",
+      "miRNA_S8141Nr60.1.fastq.gz",
+      "miRNA_S8141Nr130.1.fastq.gz"
+    ],
+    "data_directory": "input_data",
+    "output_directory": "output_data",
+    "container": "singularity"
+  }
+  
